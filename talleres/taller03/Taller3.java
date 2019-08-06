@@ -1,4 +1,4 @@
-
+f
 /**
  *
  * La clase Taller3 tiene como objtivo dar solución a los puntos del taller 3
@@ -68,7 +68,7 @@ public class Taller3 {
      */
     private static void combinationsAux(String prefix, String s) {  
         if (s.length () == 0) {
-            System.out.println ("");
+            System.out.println (prefix);
         } else {
             combinationsAux (prefix + s.charAt (0), s.substring (1));
             combinationsAux (prefix, s.substring (1));
