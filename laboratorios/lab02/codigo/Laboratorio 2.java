@@ -43,7 +43,8 @@ public class Laboratory1
                j = j-1;
             }           
        }
-       System.out.println(Arrays.toString(A));
+       //System.out.println(Arrays.toString(A));
+	System.out.println ("");  
   }
 
       // Sorts an array using Merge Sort
@@ -92,23 +93,47 @@ public class Laboratory1
     
   
   public static void main(String[] args) {
-      long TInicio; 
-      long TFin; 
-      long tiempo;
-      TInicio = System.currentTimeMillis();
-      int[] A = {1,5,3,2,6};
-      int[] B = {1,5,3,2};
-      int[] C = {1,5,2,6};
-      int[][] Arrays = {A,B,C};  
-      for (int[] X : Arrays)
-      {        
-      Laboratory1.mergeSort(X);
-      Laboratory1.InsertionSort(X);
-      System.out.println(Laboratory1.ArraySum(X) + " " + Laboratory1.ArrayMax(X) + "\n" );      
-      }
-      TFin = System.currentTimeMillis();
-      tiempo = TFin - TInicio;
-      System.out.println("Tiempo de ejecución en milisegundos: " + tiempo);
-  }
+        /*long TInicio; 
+        long TFin; 
+        long tiempo;
+        TInicio = System.currentTimeMillis();
+        int[] A = {1,5,3,2,6};
+        int[] B = {1,5,3,2};
+        int[] C = {1,5,2,6};
+        int[][] Arrays = {A,B,C};  
+        for (int[] X : Arrays)
+        {        
+        Laboratory1.mergeSort(X);
+        Laboratory1.InsertionSort(X);
+        System.out.println(Laboratory1.ArraySum(X) + " " + Laboratory1.ArrayMax(X) + "\n" );      
+        }
+        TFin = System.currentTimeMillis();
+        tiempo = TFin - TInicio;
+        System.out.println("Tiempo de ejecución en milisegundos: " + tiempo);*/
+        System.out.println ("Tiempo de Insertion Sort");
+        for (int i = 0; i < 20; i++) {
+            long start = System.currentTimeMillis ();
+            InsertionSort (nuevoArreglo (i*435));
+            long end = System.currentTimeMillis ();
+            System.out.println (end -start);
+        }
+        System.out.println ("");
+        System.out.println ("Tiempo de Merge Sort");
+        for (int i = 0; i < 20; i++) {
+            long start = System.currentTimeMillis ();
+            mergeSort (nuevoArreglo (i*435));
+            long end = System.currentTimeMillis ();
+            System.out.println (end -start);
+        }
+    }
+
+    public static int[]nuevoArreglo (int tamaño) {
+        int[] arreglo = new int [tamaño];
+        for(int i = 0 ; i < tamaño ; i++){
+            int num = (int) (Math.random()*100); 
+            arreglo[i] = num;
+        }
+        return arreglo;
+    }
   
 }
