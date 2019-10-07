@@ -31,6 +31,11 @@ public class BinaryTree {
                     temporal = temporal.left;
                 }
             }
+            if (nuevo.llave < nuevo.p.llave) {
+                nuevo.p.left = nuevo;
+            } else {
+                nuevo.p.right = nuevo;
+            }
         }
     }
 
