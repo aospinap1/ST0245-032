@@ -8,6 +8,8 @@ import java.util.Scanner;
  */
 public class Punto1
 {
+    public static HashMap <String, Carpetas> carpetas = new HashMap <String, Carpetas> ();
+    public static HashMap <String, Archivos> archivos = new HashMap <String, Archivos> ();
     public static Scanner input = new Scanner(System.in);
     public static String retornarUsuario (String s) {
         if (carpetas.get (s = input.nextLine()) != null) {
@@ -36,23 +38,5 @@ public class Punto1
 
     public static void main (String [] args) {
 
-    }
-
-    public abb buscar(int a){
-        abb arbolito = null;
-        if (!esVacio()) {
-            if (a == raiz.dato) {
-                return this;
-            }
-            else {
-                if (a < raiz.dato) {
-                    arbolito = raiz.hi.buscar(a);
-                }
-                else {
-                    arbolito = raiz.hd.buscar(a);
-                }
-            }
-        }
-        return arbolito;
     }
 }
