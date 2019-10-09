@@ -44,9 +44,22 @@ public class Punto1
         return archivos.get (s = input.nextLine()).getTamaño ();
     }
 
-    public static void main (String [] args) {
-        while (!s.equals(carpetas.get (s).getNombre ())){
-            arbol.recorrer (arbol.root);
+    public static boolean recorrer(Node node)
+    {
+        if (node != null)
+        {
+            if (s.equals(node)) {
+                return true;
+            } else {
+                return false;
+            }
+            recorrer (node.left);
+            recorrer(node.right);
         }
+        return false;
+    }
+
+    public static void main (String [] args) {
+        BinaryTree.insertar (1,s);
     }
 }
