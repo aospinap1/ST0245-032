@@ -76,8 +76,8 @@ class Grafos:
 
     teclado = input()
 
-    while teclado != 0:
+    while teclado != "Exit":
         G.add_node (Node(teclado, teclado, teclado, teclado))
 
-    while teclado != 0:
+    while teclado != "Exit":
         G.add_edge (Edges(teclado, teclado, teclado, teclado))
