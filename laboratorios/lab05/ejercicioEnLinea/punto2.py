@@ -13,8 +13,8 @@ class Punto2:
 
     def recorrerGrafo():
         for i in G: 
-            for j = i + 1 in G:
-                if G [i] == G [2]:
+            for j = i in G:
+                if G.edges [i,j] == G.edges [i,j+1]:
                     return False
         return True
             
